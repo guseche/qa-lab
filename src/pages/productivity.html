@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/productivity.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="title-large">Productivity Dashboard</h1>
+        <div class="header-controls">
+            <span class="streak-badge">
+                <span class="material-icons" style="font-size: 16px;">local_fire_department</span>
+                7 day streak
+            </span>
+            <button class="btn btn-primary" id="productivity-level"></button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="section-spacing">
+            <section class="summary-cards-grid">
+                <div class="summary-card level">
+                    <div class="summary-card-header">
+                        <span class="label">Level & XP</span>
+                        <span class="material-icons">star</span>
+                    </div>
+                    <div class="value" id="productivity-level"></div>
+                    <div class="label" id="productivity-exp"></div> 
+                    <div class="level-progress">
+                        <div class="level-progress-bar"></div>
+                    </div>
+                </div>
+
+                <div class="summary-card tasks">
+                    <div class="summary-card-header">
+                        <span class="label">Tasks Completed</span>
+                        <span class="material-icons">check_circle</span>
+                    </div>
+                    <div class="value">156</div>
+                    <div class="label">All time</div>
+                </div>
+
+                <div class="summary-card focus">
+                    <div class="summary-card-header">
+                        <span class="label">Focus Time</span>
+                        <span class="material-icons">timer</span>
+                    </div>
+                    <div class="value">39h</div>
+                    <div class="label">0m total</div>
+                </div>
+
+                <div class="summary-card productivity">
+                    <div class="summary-card-header">
+                        <span class="label">Productivity</span>
+                        <span class="material-icons">trending_up</span>
+                    </div>
+                    <div class="value">87.5%</div>
+                    <div class="label">This week</div>
+                </div>
+            </section>
+
+            <section class="task-management-section">
+                <div class="task-management-header">
+                    <h2 class="title-large">Task Management</h2>
+                    <!-- <button class="btn btn-outlined">
+                        <span class="material-icons" style="margin-right: 8px; font-size: 18px;">auto_awesome</span>
+                        AI Generate
+                    </button> -->
+                </div>
+
+                <h3 class="label-large" style="margin-bottom: 1rem;">Add New Task</h3>
+                <div class="task-input-grid">
+                    <input type="text" class="input-field" placeholder="Task Title">
+                    <select class="input-field">
+                        <option>Low Priority</option>
+                        <option selected>Medium Priority</option>
+                        <option>High Priority</option>
+                    </select>
+                    <input type="text" class="input-field" placeholder="Category">
+                    <textarea class="input-field task-description-field" placeholder="Task description" rows="2"></textarea>
+                    <input type="date" class="input-field">
+                    <button class="btn btn-primary add-task-button">
+                        <span class="material-icons" style="margin-right: 8px; font-size: 18px;">add</span>
+                        Add Task
+                    </button>
+                </div>
+
+                <div class="task-list">
+                </div>
+
+            </section>
+        </div>
+
+        <div class="section-spacing">
+            <section class="pomodoro-card">
+                <h2 class="title-large">Pomodoro Timer</h2>
+                <div class="pomodoro-timer">25:00</div>
+                <div class="pomodoro-session-label">Work Session</div>
+                <div class="pomodoro-buttons">
+                    <button class="btn btn-primary" id="main-start-pomodoro">
+                        <span class="material-icons" style="margin-right: 8px; font-size: 18px;">play_arrow</span>
+                        Start
+                    </button>
+                    <button class="btn btn-primary" id="reset-pomodoro">
+                        <span class="material-icons" style="margin-right: 8px; font-size: 18px;">refresh</span>
+                        Reset
+                    </button>
+                </div>
+                <p class="pomodoro-sessions-completed">Sessions completed: 0</p>
+            </section>
+
+            <section class="weekly-goal-card">
+                <h2 class="title-large">Weekly Goal</h2>
+                <p class="display-small" id="week-goal"></p>
+                <p class="body-large" style="color: var(--md-sys-color-on-surface-variant);">Tasks completed this week</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar-week" style="width: 80%;"></div>
+                </div>
+                <p class="progress-percentage">80% of weekly goal</p>
+            </section>
+
+            <section class="achievements-card">
+                <h2 class="title-large">Recent Achievements</h2>
+                <div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon-container">
+                            <span class="material-icons">star</span>
+                        </div>
+                        <div class="achievement-details">
+                            <h3 class="title-medium">First Step</h3>
+                            <p class="body-medium" style="color: var(--md-sys-color-on-surface-variant);">Complete your first task</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-icon-container">
+                            <span class="material-icons">local_fire_department</span>
+                        </div>
+                        <div class="achievement-details">
+                            <h3 class="title-medium">Streak Master</h3>
+                            <p class="body-medium" style="color: var(--md-sys-color-on-surface-variant);">Maintain a 7-day streak</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    
+</body>
+</html>

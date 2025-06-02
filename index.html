@@ -1,0 +1,90 @@
+<head>
+    <link rel="stylesheet" href="src/css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1"
+        rel="stylesheet">
+    <script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "https://esm.run/@material/web/"
+      }
+    }
+    </script>
+    <script type="module">
+        import '@material/web/all.js';
+    </script>
+</head>
+
+<body class="dashboard-layout">
+    <nav class="navbar">
+        <div class="navbar-container">
+            <md-icon-button id="menuToggle">
+                <md-icon>menu</md-icon>
+            </md-icon-button>
+        </div>
+        <div class="navbar-title">
+            <h1>QA
+                <span class="gradient-text">Labs</span>
+            </h1>
+        </div>
+    </nav>
+
+    <aside class="md3-sidebar" id="sidebar">
+
+        <nav class="md3-section">
+            <a href="#" onclick="loadRoute('home')"><span class="dot"></span> Home</a>
+            <a href="#" onclick="loadRoute('productivity')"><span class="dot"></span> Productivity Hub</a>
+        </nav>
+
+        <nav class="md3-section">
+            <p class="md3-section-title">PRODUCTIVITY</p>
+            <a href="#" onclick="loadRoute('ai')"><span class="material-symbols-outlined">Neurology</span> AI
+                Assistant<span class="construction">🚧</span></a>
+            <a href="#" onclick="loadRoute('pomodoro')"><span class="material-symbols-outlined">timer</span> Pomodoro
+                Timer<span class="construction">🚧</span></a>
+            <a href="#" onclick="loadRoute('analytics')"><span class="material-symbols-outlined">analytics</span>
+                Analytics<span class="construction">🚧</span></a>
+            <a href="#" onclick="loadRoute('archievemets')"><span class="material-symbols-outlined">emoji_events</span>
+                Achievements<span class="construction">🚧</span></a>
+        </nav>
+
+        <nav class="md3-section">
+            <p class="md3-section-title">FEATURES</p>
+            <a href="#" onclick="loadRoute('forms')"><span class="material-symbols-outlined">
+                    forms_add_on
+                </span>Forms
+                <span class="construction">🚧</span>
+                <a href="#" onclick="loadRoute('designer')"><span
+                        class="material-symbols-outlined">visibility</span>Designer
+                    <span class="construction">🚧</span>
+                </a>
+                <a href="#" onclick="loadRoute('modals_&_ovelays')"><span class="material-symbols-outlined">
+                        new_window
+                    </span>Modal & Overlays<span class="construction">🚧</span></a>
+                <a href="#" onclick="loadRoute('extra_components')"><span class="material-symbols-outlined">
+                        library_add
+                    </span>Extra Components<span class="construction">🚧</span></a>
+                <a href="#" onclick="loadRoute('charts')"><span
+                        class="material-symbols-outlined">query_stats</span>Charts<span
+                        class="construction">🚧</span></a>
+                <a href="#" onclick="loadRoute('tables_&_data')"><span
+                        class="material-symbols-outlined">table</span>Tables & Data<span
+                        class="construction">🚧</span></a>
+                <a href="#" onclick="loadRoute('auth')"><span
+                        class="material-symbols-outlined">shield_lock</span>Auth<span class="construction">🚧</span></a>
+        </nav>
+    </aside>
+
+    <main id="app"></main>
+
+    <script src="src/js/router.js"></script>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+            document.body.classList.toggle('sidebar-hidden');
+        });
+    </script>
+</body>

@@ -1,0 +1,202 @@
+<head>
+    <style> 
+        .center {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-title {
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-desc {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .cta-section {
+            margin-top: 4rem;
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #3f51b5, #7b1fa2);
+            text-align: center;
+            color: white;
+            box-shadow: 0 8px 24px rgba(63, 81, 181, 0.3);
+        }
+
+        .cta-section h2 {
+            margin: 0 0 1rem 0;
+            font-size: 2rem;
+        }
+
+        .cta-section p {
+            margin: 0 0 2rem 0;
+            opacity: 0.9;
+        }
+
+        .action-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .action-button {
+            --md-outlined-button-outline-color: rgba(255, 255, 255, 0.5);
+            --md-outlined-button-label-text-color: white;
+            --md-outlined-button-hover-state-layer-color: rgba(255, 255, 255, 0.1);
+            --md-outlined-button-pressed-state-layer-color: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            min-height: 60px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section {
+                padding: 2rem 1rem;
+            }
+            
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1 class="title">QA <span class="gradient-text">Labs</span></h1>
+        <br />
+        <p>Plataforma integral de testing y aseguramiento de calidad para equipos de desarrollo modernos.</p>
+    </div>
+
+    <h2 class="center">Plataforma de Práctica para Automatización de Pruebas</h2>
+
+    <div class="features">
+        <div class="feature-card">
+            <div class="icon">🏠</div>
+            <div class="feature-title">Inicio</div>
+            <div class="feature-desc">Página principal con descripción de servicios y metodologías de testing</div>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">🧪</div>
+            <div class="feature-title">Laboratorios</div>
+            <div class="feature-desc">Entornos de práctica para diferentes tipos de testing y automatización</div>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">🛠️</div>
+            <div class="feature-title">Herramientas</div>
+            <div class="feature-desc">Conjunto de utilidades y herramientas para testing y desarrollo</div>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">📋</div>
+            <div class="feature-title">Plantillas</div>
+            <div class="feature-desc">Templates y formularios prediseñados para casos de prueba</div>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">🎯</div>
+            <div class="feature-title">Prácticas</div>
+            <div class="feature-desc">Ejercicios interactivos y escenarios de testing para mejorar habilidades</div>
+        </div>
+
+        <div class="feature-card">
+            <div class="icon">📚</div>
+            <div class="feature-title">Recursos</div>
+            <div class="feature-desc">Documentación, guías y materiales de aprendizaje para testing</div>
+        </div>
+
+    </div>
+
+    <!-- Sección final: llamado a la acción -->
+    <div class="cta-section">
+        <h2>¿Listo para comenzar a practicar?</h2>
+        <p>Inicia tu entrenamiento en testing y automatización con nuestros laboratorios interactivos</p>
+        
+        <h2>🎯 Por aquí puedes iniciar</h2>
+
+        <div class="action-buttons">
+            <md-outlined-button class="action-button">
+                <span style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;">✅</span>
+                Ver Formularios
+            </md-outlined-button>
+
+            <md-outlined-button class="action-button">
+                <span style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;">📊</span>
+                Ver Gráficos
+            </md-outlined-button>
+
+            <md-outlined-button class="action-button">
+                <span style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;">🛡️</span>
+                Ver Auth
+            </md-outlined-button>
+
+            <md-outlined-button class="action-button">
+                <span style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;">💾</span>
+                Ver Tablas
+            </md-outlined-button>
+        </div>
+    </div>
+
+    
+</body>
